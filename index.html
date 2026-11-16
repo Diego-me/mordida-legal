@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mordida · Política de privacidad</title>
+  <meta name="description" content="Política de privacidad de la app Mordida.">
+  <style>
+    :root { --plum: #4A1D4F; --text: #2A1030; --muted: #624A66; --bg: #FBF3F2; --card: #FFFFFF; --border: #EFDCE0; --mango: #FFB547; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+    header { border-bottom: 4px solid var(--mango); padding-bottom: 12px; margin-bottom: 24px; }
+    h1 { color: var(--plum); font-size: 30px; line-height: 1.2; margin: 0 0 4px; }
+    h2 { color: var(--plum); font-size: 21px; margin: 32px 0 8px; }
+    p, li { margin: 0 0 10px; }
+    .muted { color: var(--muted); }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 16px 20px; }
+    a { color: var(--plum); }
+    table { width: 100%; border-collapse: collapse; font-size: 16px; }
+    th, td { text-align: left; vertical-align: top; padding: 8px; border-bottom: 1px solid var(--border); }
+    th { color: var(--plum); }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Política de privacidad de Mordida</h1>
+    <p class="muted">Última actualización: 15 de noviembre de 2026</p>
+  </header>
+
+  <div class="card">
+    <p><strong>En resumen:</strong> Mordida no tiene cuentas, publicidad ni analítica. Tu historial se guarda solo en tu teléfono. Para evaluar un producto enviamos el código de barras a Open Food Facts y, si tú tomas una foto de la etiqueta, la enviamos a un servicio de inteligencia artificial (Google Gemini) para leerla. No vendemos ni compartimos tus datos con fines comerciales.</p>
+  </div>
+
+  <h2>1. Quién es responsable</h2>
+  <p>Mordida es una app desarrollada de forma independiente por su autor (usuario de GitHub <a href="https://github.com/Diego-me">Diego-me</a>). Para consultas sobre privacidad, escribe a través de <a href="https://github.com/Diego-me/mordida-legal/issues">este canal de contacto</a>.</p>
+
+  <h2>2. Qué datos se usan y para qué</h2>
+  <table>
+    <tr><th>Dato</th><th>Para qué</th><th>Dónde va</th></tr>
+    <tr><td>Código de barras escaneado o escrito</td><td>Buscar la información nutricional del producto</td><td>Open Food Facts (base de datos abierta). Como en cualquier conexión a internet, recibe la dirección IP del teléfono.</td></tr>
+    <tr><td>Foto de la tabla nutricional o de los ingredientes (solo si tú la tomas)</td><td>Leer las cifras y los ingredientes cuando el producto no está en la base de datos</td><td>Nuestro servidor intermedio (Cloudflare Workers), que la reenvía a la API de Google Gemini. Nuestro servidor no guarda la foto.</td></tr>
+    <tr><td>Historial de productos y resultados</td><td>Mostrarte tu resumen, tu historial y funcionar sin conexión</td><td>Solo en tu teléfono (base de datos local de la app).</td></tr>
+  </table>
+  <p>La app no pide tu nombre, correo, ubicación, contactos ni datos de salud. No registra qué comes ni cuánto: solo los productos que decides revisar.</p>
+
+  <h2>3. Servicios de terceros</h2>
+  <ul>
+    <li><strong>Open Food Facts</strong>: recibe el código de barras. Ver su <a href="https://world.openfoodfacts.org/privacy">política de privacidad</a>.</li>
+    <li><strong>Cloudflare</strong>: aloja nuestro servidor intermedio. Procesa la dirección IP para seguridad y para limitar abusos (por ejemplo, demasiadas solicitudes por minuto). Guardamos registros técnicos breves (identificador de la solicitud, modelo usado y resultado), sin la foto. Ver la <a href="https://www.cloudflare.com/privacypolicy/">política de Cloudflare</a>.</li>
+    <li><strong>Google Gemini API</strong>: analiza la foto. Google procesa y puede conservar el contenido según los <a href="https://ai.google.dev/gemini-api/terms">términos de la API de Gemini</a>; según el tipo de cuenta del servicio, Google puede usar el contenido para mejorar sus productos. Por eso te pedimos fotografiar solo la etiqueta del producto, sin personas ni datos personales.</li>
+  </ul>
+
+  <h2>4. Permisos del teléfono</h2>
+  <ul>
+    <li><strong>Cámara</strong>: para leer códigos de barras y tomar la foto de la etiqueta. Las imágenes del escáner no se guardan ni se envían; solo se envía la foto que tú tomas para analizar.</li>
+    <li><strong>Internet</strong>: para consultar Open Food Facts y el análisis por foto.</li>
+  </ul>
+  <p>La app no usa micrófono, ubicación ni contactos.</p>
+
+  <h2>5. Copias de seguridad</h2>
+  <p>Si tienes activada la copia de seguridad de Android en tu cuenta de Google, el sistema puede incluir el historial de Mordida en esa copia, para que no lo pierdas al cambiar de teléfono. Esa copia la gestiona Google según tu configuración.</p>
+
+  <h2>6. Cuánto tiempo se guardan</h2>
+  <ul>
+    <li>Historial: hasta 500 productos en tu teléfono; los más antiguos se borran solos.</li>
+    <li>Productos guardados para usar sin conexión: hasta 2.000, renovados cada 30 días.</li>
+    <li>Registros técnicos del servidor: los conservados por Cloudflare por un período corto, sin fotos.</li>
+  </ul>
+
+  <h2>7. Cómo borrar tus datos</h2>
+  <p>En la app, entra a <strong>Inicio → Ajustes y privacidad → Borrar todos los datos</strong>. También puedes quitar un producto desde su detalle o desinstalar la app, lo que borra todo lo guardado en el teléfono. No mantenemos copias de tu historial en ningún servidor.</p>
+
+  <h2>8. Aviso sobre salud</h2>
+  <p>Mordida es una guía orientativa para elegir alimentos. No es un dispositivo médico, no diagnostica, no calcula dosis y no reemplaza las indicaciones de tu médico o nutricionista.</p>
+
+  <h2>9. Menores de edad</h2>
+  <p>Mordida no está dirigida a menores de 13 años y no recopila a sabiendas datos de menores.</p>
+
+  <h2>10. Seguridad</h2>
+  <p>Las conexiones usan HTTPS. El servidor intermedio solo acepta fotos de etiquetas, limita el tamaño y la frecuencia de las solicitudes, y la clave del servicio de inteligencia artificial nunca está en la app.</p>
+
+  <h2>11. Cambios</h2>
+  <p>Si esta política cambia, publicaremos la nueva versión en esta misma página con su fecha de actualización.</p>
+</main>
+</body>
+</html>
